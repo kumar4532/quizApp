@@ -109,7 +109,8 @@ POST /api/user/logout
 ```
 
 ### Task Endpoints
-You need to be authenticated to perform any of the task operations.
+- You need to be authenticated to perform any of the task operations.
+- :id - will be the id of a quizz
 
 - Create a Quiz
 ```
@@ -144,4 +145,21 @@ GET /api/quiz/all/
 - Get details of a quiz
 ```
 GET /api/quiz/details/:id
+```
+
+- Attempt a quiz
+```
+POST /api/quiz/attempt/:id
+```
+Request Body:
+json
+```
+{
+    "answers":[0,2]
+}
+```
+
+- Get result of a quiz
+```
+GET /api/quiz/result/:id
 ```
